@@ -1,7 +1,8 @@
 const Koa = require('koa');
 const Router = require('koa-router');
 const koaBody = require('koa-body');
-// const model = require('./model');
+// 데이터베이스 모델링
+// const model = require('./model'); 
 
 const app = new Koa();
 const router = new Router();
