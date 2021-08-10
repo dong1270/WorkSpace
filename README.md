@@ -1,13 +1,23 @@
-# WorkSpace
+---
+# WorkSpace door 제작
 
-## 참여자 
-    1. 강동성
-    2. 서장대(서방장대)
-    3. 임상규
-    4. 최동민
-## 백엔드
-    Node.js
-## 프론트엔드
-    React.js
-## 데이터베이스
-    MariaDB
+## 프로젝트 개요 및 배경
+- door
+## OS  
+- Window 10 
+## Tool
+- MariaDB
+- GitHub
+- goorm.io
+## Language
+- HTML / CSS / JavaScript / Jquery / Node.js / React.js
+
+# 참여자 
+- 강동성
+- 서장대
+- 임상규
+- 최동민
+
+---
+
+    
