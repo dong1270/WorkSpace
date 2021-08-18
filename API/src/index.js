@@ -13,6 +13,14 @@ const main = async (ctx) => {
 }
 router.get('/', main);
 
+const ledOn = async (ctx) => {
+    const signal = ctx.request.body;
+    const ret = await module.ledOn({signal});
+
+    ctx.body = ret;
+}
+router.post('/ledOn', bodyParser(), ledOn);
+
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.listen(4000);
