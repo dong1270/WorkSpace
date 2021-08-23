@@ -24,5 +24,3 @@ router.post('/ledOn', bodyParser(), ledOn);
 app.use(router.routes());
 app.use(router.allowedMethods());
 app.listen(4000);
-
-
