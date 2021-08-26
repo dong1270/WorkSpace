@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React 상규사랑해
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    onoff: 0,
+  };
+
+  offBtnClick = () => {
+    console.log('offClick 클릭');
+    this.setState({ onoff : 0});
+  };
+  
+  onBtnClick = () => {
+    console.log('onClick 클릭');
+    this.setState({ onoff : 1});
+  };
+
+  render() {
+    return (
+      <div>
+        <h1>switch state is: {this.state.onoff}</h1>
+        <button onClick={this.onBtnClick}>On</button>
+        <button onClick={this.offBtnClick}>Off</button>
+      </div>
+    );
+  }
 }
 
 export default App;
