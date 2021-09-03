@@ -3,27 +3,25 @@ const Router = require('koa-router');
 const koaBody = require('koa-body');
 const controller = require('./controller');
 
+const app = new Koa();
+const router = new Router();
+
 const bodyParser = () => {
     return koaBody({ multipart: true });
 }
 
-const app = new Koa();
-const router = new Router();
-
-const routerOne = async (ctx) => {
-    const ret = 'sweet home';
-    ctx.body = ret;
+const main = async (ctx) => {
+    ctx.body = "WorkSpace";
 }
-router.get('/', routerOne);
+router.get('/', main);
 
-const routerTwo = async (ctx) => {
-    const {parameterOne} = ctx.request.body;
-    const ret = await controller.moduleTwo({parameterOne});
+const led = async (ctx) => {
+    const ledSwitch = ctx.request.body;
+    const ret = await controller.led(ledSwitch);
 
     ctx.body = ret;
 }
-router.post('/routerTwo', bodyParser(), routerTwo);
-
+router.post('/led', bodyParser(), led);
 
 app.use(router.routes());
 app.use(router.allowedMethods());
