@@ -4,7 +4,7 @@
 ## OS  
 - Window 10 
 - Ubuntu 18.04 LTS
-- 
+
 ## Tool
 - MariaDB
 - GitHub
