@@ -8,7 +8,7 @@
 ## Tool
 - MariaDB
 - GitHub
-- 
+
 ## Language
 - HTML / CSS / JavaScript / Node.js / React.js
 
